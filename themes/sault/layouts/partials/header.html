@@ -1,0 +1,29 @@
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="inner">
+
+			<div class="site-title">
+				<h1>
+					<a href="index.html">
+						<img src="/../tmp/logo.png" width="150" alt="Arco's Angels">
+					</a>
+				</h1>
+				<a href="#site-menu" class="site-menu-toggle">
+					<span class="sr-only">Toggle navigation</span>
+				</a>
+			</div>
+
+			<div id="site-menu">
+				<nav>
+					<ul>
+						<li {{ if eq .RelPermalink "/" }}class="current-menu-item"{{ end }}><a href="/">Home</a></li>
+						<li {{ if eq .RelPermalink "/rankings/" }}class="current-menu-item"{{ end }}><a href="/rankings/">KM Klassement</a></li>
+						<li {{ if eq .RelPermalink "/team/" }}class="current-menu-item"{{ end }}><a href="/team/">Het team</a></li>
+						<li {{ if eq .RelPermalink "/sponsors/" }}class="current-menu-item"{{ end }}><a href="/sponsors/">Sponsoren</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+	</div>
+</header>
