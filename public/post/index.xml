@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Arco&#39;s Angels</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Arco&#39;s Angels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Sun, 11 Feb 2018 11:35:58 +0530</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>De CPC Loop</title>
+      <link>http://localhost:1313/post/1/</link>
+      <pubDate>Sun, 11 Feb 2018 11:35:58 +0530</pubDate>
+      
+      <guid>http://localhost:1313/post/1/</guid>
+      <description>Hi there. My first Hugo post</description>
+    </item>
+    
+  </channel>
+</rss>
