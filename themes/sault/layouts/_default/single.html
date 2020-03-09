@@ -1,24 +1,31 @@
 {{ define "main" }}
-<div class="col-12">
-	<div class="post featured has-thumbnail">
-		<img src="{{ .Params.Image | relURL }}" width="1180" height="680" alt="">
+<div class="row">
+	<div class="col-12">
+		<div class="post-featured-image">
+			<img src="{{ .Params.Image | relURL }}" width="1180" height="680" alt="">
+		</div>
+	</div>
+	<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+		<article class="post has-thumbnail">
+			<div class="post-header">
+				<h2>{{ .Title }}</h2>
+				<p class="meta-info">
+					<span class="post-author">By <span style="font-style: italic;">{{ .Params.Author }}</span></span>
+					<span class="post-date">{{ .Date.Format "2 januari 2006" }}</span>
+				</p>
+			</div>
+			<div class="post-content">
+				{{ .Content }}
+			</div>
+		</article>
+
+		<div class="row post-footer">
+			<div class="col-12">
+				{{ template "_internal/disqus.html" . }}
+			</div>
+		</div>
+		<div class="clear"></div>
 	</div>
 </div>
-<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-	<article class="post has-thumbnail">
-		<div class="post-header">
-			<h2>{{ .Title }}</h2>
-			<p class="meta-info">
-				<span class="post-author">Door {{ .Params.Author }}</span>
-				<span class="post-date">{{ .Date }}</span>
-			</p>
-		</div>
-		<div class="post-content">
-			{{ .Content }}
-		</div>
-	</article>
-	<div class="clear"></div>
-</div>
-  
 {{ end }}
 

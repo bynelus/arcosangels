@@ -4,4 +4,5 @@ date: {{ .Date }}
 description: ""
 author: ""
 image: ""
+bodyClass: "single"
 ---

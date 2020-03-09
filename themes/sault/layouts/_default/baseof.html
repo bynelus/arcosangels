@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
+    <body class="{{ .Params.BodyClass }}">
         {{- partial "header.html" . -}}
 
-        <main id="content" class="white-background">
+        {{ if .Params.NotWhite }}
+            <main id="content">
+        {{ else }}
+            <main id="content" class="white-background">
+        {{ end }}
+        
 			<div class="container">
         		{{- block "main" . }}{{- end }}
         	</div>

@@ -27,3 +27,22 @@
 <script src="{{ "js/imagesloaded.pkgd.min.js" | relURL }}"></script>
 <script src="{{ "js/masonry.pkgd.min.js" | relURL }}"></script>
 <script src="{{ "js/functions.js" | relURL }}"></script>
+<script src="{{ "js/owl.carousel.min.js" | relURL }}"></script>
+<script>
+	jQuery(".owl-carousel.owl-thumbs-2").owlCarousel({
+		items   : 2,
+		margin  : 30,
+		nav     : true,
+		navText : ['', ''],
+		dots    : false,
+		loop    : false,
+		responsive : {
+			0:{
+				items: 1
+			},
+			768:{
+				items: 2
+			},
+		}
+	});
+</script>
