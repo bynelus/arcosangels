@@ -2,9 +2,7 @@
 <div class="row blog-listing no-sidebar">
 	<div class="col-12">
 		<article class="post featured has-thumbnail">
-			<a href="post.html" class="feature-image-link">
-				<img src="tmp/sample-big.png" width="1180" height="680" alt="">
-			</a>
+			<img src="{{ "tmp/sample-big.png" | relURL }}" width="1180" height="680" alt="">
 			<div class="post-details">
 				<h3>Welkom op de team pagina van Arco's Angels.</h3>
 				<hr>
@@ -16,11 +14,11 @@
 		<div class="grid clearfix">
 			{{ $pages := .Pages }}
 		    {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-		    {{ range (where $pages "Section" "!=" "") }}
+		    {{ range (where $pages "Section" "!=" "").ByDate.Reverse }}
 			<article class="grid-item post has-thumbnail">
-				<a href="post.html" class="feature-image-link"><img src="tmp/sample-post.png" width="730" height="500" alt=""></a>
+				<a href="{{ .Permalink }}" class="feature-image-link"><img src="{{ .Params.Image | relURL }}" width="730" height="500" alt=""></a>
 				<div class="post-details">
-					<h4><a href="post.html">{{ .Title }}</a></h4>
+					<h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
 					<p>{{ .Description }}</p>
 					<p class="meta clearfix"><span style="font-style: italic;">{{ .Params.Author }}</span> <a href="{{ .Permalink }}" class="read-more">Lees meer <i class="saulticon-arrow-forward"></i></a></p>
 				</div>
