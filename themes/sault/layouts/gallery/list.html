@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="row">
+	<div class="project-listing col-12">
+		<div class="grid clearfix" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer", "percentPosition": true, "transitionDuration": "0.3s" }'>
+			<div class="grid-item grid-item-wide project-thumb welcome-message">
+				<div class="inner">
+					<h1>Onze <a href="/team/">Angels</a>.<br />Een verzameling foto's, mocht je niet geloven dat wij héél serieus zijn.</h1>
+				</div>
+			</div>
+
+			{{ range .Pages }}
+			<div class="grid-item project-thumb">
+				<a href="{{ .Permalink }}">
+					<img src="{{ .Params.Image | relURL }}" width="900" height="900" alt="">
+					
+				</a>
+			</div>
+			{{ end }}
+			<div class="grid-sizer"></div>
+			<div class="gutter-sizer"></div>
+		</div>
+
+		<!-- <p class="extra-margin-top text-center">
+			<a href="work.html" class="button white big has-arrow">View all our work</a>
+		</p> -->
+	</div>
+</div>
+{{ end }}

@@ -3,41 +3,106 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://arcos-angels.nl/post/1/</loc>
+    <lastmod>2020-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/post/</loc>
+    <lastmod>2020-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/1/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/10/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/11/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/12/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/2/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/3/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/4/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/5/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/6/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/7/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/8/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/gallery/9/</loc>
+    <lastmod>2019-03-09T21:53:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arcos-angels.nl/</loc>
     <lastmod>2018-02-11T11:35:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/1/</loc>
+    <loc>https://arcos-angels.nl/gallery/</loc>
     <lastmod>2018-02-11T11:35:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://arcos-angels.nl/rankings/</loc>
     <lastmod>2018-02-11T11:35:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/rankings/</loc>
+    <loc>https://arcos-angels.nl/sponsors/</loc>
     <lastmod>2018-02-11T11:35:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/sponsors/</loc>
+    <loc>https://arcos-angels.nl/team/</loc>
     <lastmod>2018-02-11T11:35:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/team/</loc>
-    <lastmod>2018-02-11T11:35:58+05:30</lastmod>
+    <loc>https://arcos-angels.nl/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://arcos-angels.nl/tags/</loc>
   </url>
   
 </urlset>

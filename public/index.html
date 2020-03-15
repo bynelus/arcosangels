@@ -8,19 +8,21 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 
-	<base href="http://localhost:1313/">
-	<link rel="shortcut icon" href="favicon.png">
+	<link rel="shortcut icon" href="/tmp/favicon.png">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700" rel="stylesheet">
-	<link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-</head><body><header id="top" class="navbar">
+	<link href="/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/css/style-personal.css" rel="stylesheet" type="text/css">
+
+	<link rel="alternate" type="application/rss+xml" href="https://arcos-angels.nl/index.xml" title="Arco's Angels" />
+	</head><body class=""><header id="top" class="navbar">
 	<div class="container">
 		<div class="inner">
 
 			<div class="site-title">
 				<h1>
-					<a href="index.html">
-						<img src="/../tmp/logo.png" width="150" alt="Arco's Angels">
+					<a href="/">
+						<img src="/tmp/logo.png" width="150" alt="Arco's Angels">
 					</a>
 				</h1>
 				<a href="#site-menu" class="site-menu-toggle">
@@ -33,6 +35,7 @@
 					<ul>
 						<li class="current-menu-item"><a href="/">Home</a></li>
 						<li ><a href="/rankings/">KM Klassement</a></li>
+						<li ><a href="/gallery/">Gallerij</a></li>
 						<li ><a href="/team/">Het team</a></li>
 						<li ><a href="/sponsors/">Sponsoren</a></li>
 					</ul>
@@ -41,14 +44,15 @@
 
 		</div>
 	</div>
-</header><main id="content" class="white-background">
+</header>
+            <main id="content" class="white-background">
+        
+        
 			<div class="container">
 <div class="row blog-listing no-sidebar">
 	<div class="col-12">
 		<article class="post featured has-thumbnail">
-			<a href="post.html" class="feature-image-link">
-				<img src="tmp/sample-big.png" width="1180" height="680" alt="">
-			</a>
+			<img src="/img/homepage.jpg" width="1180" height="680" alt="">
 			<div class="post-details">
 				<h3>Welkom op de team pagina van Arco's Angels.</h3>
 				<hr>
@@ -59,16 +63,14 @@
 	<div class="col-12">
 		<div class="grid clearfix">
 			
-		    
-		    
 			<article class="grid-item post has-thumbnail">
-				<a href="post.html" class="feature-image-link"><img src="tmp/sample-post.png" width="730" height="500" alt=""></a>
+				<a href="https://arcos-angels.nl/post/1/" class="feature-image-link"><img src="/blog/1.jpg" width="730" height="500" alt=""></a>
 				<div class="post-details">
-					<h4><a href="post.html">De CPC Loop</a></h4>
-					<p>Dit is de korte omschrijving.</p>
-					<p class="meta clearfix"><span style="font-style: italic;">Niels</span> <a href="http://localhost:1313/post/1/" class="read-more">Lees meer <i class="saulticon-arrow-forward"></i></a></p>
+					<h4><a href="https://arcos-angels.nl/post/1/">Nieuwe website &amp; CPC</a></h4>
+					<p>Welkom op onze nieuwe website. Met gelijk een leuke update van afgelopen weekend.</p>
+					<p class="meta clearfix"><span style="font-style: italic;">Niels Koole</span> <a href="https://arcos-angels.nl/post/1/" class="read-more">Lees meer <i class="saulticon-arrow-forward"></i></a></p>
 				</div>
-			</article>
+			</article>    
 			
 		</div>
 	</div>
@@ -82,7 +84,7 @@
 				<div class="widget-area">
 					<div class="widget widget_text">
 						<p>
-							<a href="index.html" class="mini-logo"><img src="tmp/logo.png" width="144" height="33" alt="Sault"></a>
+							<a href="/" class="mini-logo"><img src="/tmp/logo.png" width="144" height="33" alt="Arco's Angels"></a>
 						</p>
 					</div>
 					<div class="widget widget_nav_menu">
@@ -99,9 +101,28 @@
 	</div>
 </footer>
 
-<script src="./js/modernizr-custom.min.js"></script>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/imagesloaded.pkgd.min.js"></script>
-<script src="./js/masonry.pkgd.min.js"></script>
-<script src="./js/functions.js"></script></body>
+<script src="/js/modernizr-custom.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/functions.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script>
+	jQuery(".owl-carousel.owl-thumbs-2").owlCarousel({
+		items   : 2,
+		margin  : 30,
+		nav     : true,
+		navText : ['', ''],
+		dots    : false,
+		loop    : false,
+		responsive : {
+			0:{
+				items: 1
+			},
+			768:{
+				items: 2
+			},
+		}
+	});
+</script></body>
 </html>

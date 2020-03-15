@@ -12,9 +12,7 @@
 	</div>
 	<div class="col-12">
 		<div class="grid clearfix">
-			{{ $pages := .Pages }}
-		    {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-		    {{ range (where $pages "Section" "!=" "").ByDate.Reverse }}
+			{{ range where .Site.RegularPages.ByDate.Reverse "Section" "post" }}
 			<article class="grid-item post has-thumbnail">
 				<a href="{{ .Permalink }}" class="feature-image-link"><img src="{{ .Params.Image | relURL }}" width="730" height="500" alt=""></a>
 				<div class="post-details">
@@ -22,7 +20,7 @@
 					<p>{{ .Description }}</p>
 					<p class="meta clearfix"><span style="font-style: italic;">{{ .Params.Author }}</span> <a href="{{ .Permalink }}" class="read-more">Lees meer <i class="saulticon-arrow-forward"></i></a></p>
 				</div>
-			</article>
+			</article>    
 			{{ end }}
 		</div>
 	</div>

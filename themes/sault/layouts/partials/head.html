@@ -11,4 +11,8 @@
 	<link href="{{ "css/bootstrap-grid.min.css" | relURL }}" rel="stylesheet" type="text/css">
 	<link href="{{ "css/style.css" | relURL }}" rel="stylesheet" type="text/css">
 	<link href="{{ "css/style-personal.css" | relURL }}" rel="stylesheet" type="text/css">
+
+	{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
 </head>

@@ -1,0 +1,28 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+	Gallerij on 
+	Arco&#39;s Angels
+	</title>
+    <link>https://arcos-angels.nl/gallery/</link>
+    <description>Recent content in Gallerij 
+	on Arco&#39;s Angels</description>
+    <language>nl-NL</language>
+	
+    <lastBuildDate>Sun, 11 Feb 2018 11:35:58 +0530</lastBuildDate>
+	
+    
+        <atom:link href="https://arcos-angels.nl/gallery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nieuwe website &amp; CPC</title>
+      <link>https://arcos-angels.nl/post/1/</link>
+      <pubDate>Mon, 09 Mar 2020 21:53:00 +0100</pubDate>
+      
+      <guid>https://arcos-angels.nl/post/1/</guid>
+      <description>Welkom op onze nieuwe website. Met gelijk een leuke update van afgelopen weekend.</description>
+    </item>
+    
+  </channel>
+</rss>
