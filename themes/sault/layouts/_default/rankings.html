@@ -16,6 +16,7 @@
 								<th>Wie?</th>
 								<th>Aantal loopjes</th>
 								<th>Gemiddelde ronde</th>
+								<th>Gemiddelde snelheid</th>
 								<th>Totaal</th>
 							</tr>
 						</thead>
@@ -26,7 +27,8 @@
 								<td>{{ add $index 1 }}.</td>
 								<td>{{ $element.firstName }}</td>
 								<td>{{ $element.runTotalActivities }}</td>
-								<td><span style="font-style: italic;">{{ math.Round (div $element.runAverageDistance 1000) }} km</span> in <span style="font-style: italic;">{{ math.Round (div $element.runAverageMovingTime 60) }} minuten</span></td>
+								<td>{{ lang.NumFmt 2 (div $element.runAverageDistance 1000) "- , ." }} km in {{ math.Floor (div $element.runAverageMovingTime 60) }}:{{ mod $element.runAverageMovingTime 60 }} min.</td>
+								<td>{{ math.Floor (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) }}:{{ printf "%02d" (mod (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) 60) }} min / km</td>
 								<td>{{ math.Round (div $element.runTotalDistance 1000) }} kilometer</td>
 							</tr>
 							{{ end }}
