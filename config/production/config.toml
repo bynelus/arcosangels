@@ -1,1 +1,4 @@
 baseURL = "https://arcos-angels.nl/"
+
+[params]
+  rankingsURL = "https://arcos-angels-strava-client.herokuapp.com/json"

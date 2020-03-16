@@ -14,17 +14,22 @@
 							<tr>
 								<th>Wie?</th>
 								<th>Aantal loopjes</th>
-								<th>Gem. aantal km's per loop</th>
+								<th>Duur per loop (gem.)</th>
+								<th>Km's per loop (gem.)</th>
 								<th>Totaal km</th>
 							</tr>
 						</thead>
 						<tbody>
+							{{ $json := getJSON .Site.Params.RankingsURL }}
+							{{ range $json }}
 							<tr>
-								<td>Arco</td>
-								<td>455</td>
-								<td>17</td>
-								<td>tien duizend</td>
+								<td>{{ .firstName }}</td>
+								<td>{{ .runTotalActivities }}</td>
+								<td>{{ math.Round (div .runAverageMovingTime 60) }}</td>
+								<td>{{ math.Round (div .runAverageDistance 1000) }}</td>
+								<td>{{ math.Round (div .runTotalDistance 1000) }}</td>
 							</tr>
+							{{ end }}
 						</tbody>
 					</table>
 				</div>
