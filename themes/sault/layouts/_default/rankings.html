@@ -14,9 +14,9 @@
 							<tr>
 								<th>Wie?</th>
 								<th>Aantal loopjes</th>
-								<th>Duur per loop (gem.)</th>
-								<th>Km's per loop (gem.)</th>
-								<th>Totaal km</th>
+								<th>Gemiddelde duur</th>
+								<th>Gemiddeld aantal km's</th>
+								<th>Totaal</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -25,9 +25,9 @@
 							<tr>
 								<td>{{ .firstName }}</td>
 								<td>{{ .runTotalActivities }}</td>
-								<td>{{ math.Round (div .runAverageMovingTime 60) }}</td>
+								<td>{{ math.Round (div .runAverageMovingTime 60) }} minuten</td>
 								<td>{{ math.Round (div .runAverageDistance 1000) }}</td>
-								<td>{{ math.Round (div .runTotalDistance 1000) }}</td>
+								<td>{{ math.Round (div .runTotalDistance 1000) }} kilometer</td>
 							</tr>
 							{{ end }}
 						</tbody>
