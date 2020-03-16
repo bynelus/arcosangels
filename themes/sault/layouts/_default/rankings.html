@@ -12,6 +12,7 @@
 					<table class="extra-margin-bottom">
 						<thead>
 							<tr>
+								<th>#</th>
 								<th>Wie?</th>
 								<th>Aantal loopjes</th>
 								<th>Gemiddelde ronde</th>
@@ -20,12 +21,13 @@
 						</thead>
 						<tbody>
 							{{ $json := getJSON .Site.Params.RankingsURL }}
-							{{ range $json }}
+							{{ range $index, $element := $json }}
 							<tr>
-								<td>{{ .firstName }}</td>
-								<td>{{ .runTotalActivities }}</td>
-								<td><span style="font-style: italic;">{{ math.Round (div .runAverageDistance 1000) }} km</span> in <span style="font-style: italic;">{{ math.Round (div .runAverageMovingTime 60) }} minuten</span></td>
-								<td>{{ math.Round (div .runTotalDistance 1000) }} kilometer</td>
+								<td>{{ add $index 1 }}.</td>
+								<td>{{ $element.firstName }}</td>
+								<td>{{ $element.runTotalActivities }}</td>
+								<td><span style="font-style: italic;">{{ math.Round (div $element.runAverageDistance 1000) }} km</span> in <span style="font-style: italic;">{{ math.Round (div $element.runAverageMovingTime 60) }} minuten</span></td>
+								<td>{{ math.Round (div $element.runTotalDistance 1000) }} kilometer</td>
 							</tr>
 							{{ end }}
 						</tbody>
