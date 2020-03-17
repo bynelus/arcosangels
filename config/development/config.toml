@@ -2,3 +2,8 @@ baseURL = "http://localhost:1313/"
 
 [params]
   rankingsURL = "http://localhost:8080/json"
+
+[caches]
+[caches.getjson]
+dir = ":cacheDir/:project"
+maxAge = 0
