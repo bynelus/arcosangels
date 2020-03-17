@@ -1,4 +1,5 @@
 baseURL = "https://arcos-angels.nl/"
+googleAnalytics = "UA-160866422-1"
 
 [params]
   rankingsURL = "https://arcos-angels-strava-client.herokuapp.com/json"
