@@ -23,14 +23,23 @@
 						<tbody>
 							{{ $json := getJSON .Site.Params.RankingsURL }}
 							{{ range $index, $element := $json }}
-							<tr>
-								<td>{{ add $index 1 }}.</td>
-								<td>{{ $element.firstName }}</td>
-								<td>{{ $element.runTotalActivities }}</td>
-								<td>{{ lang.NumFmt 2 (div $element.runAverageDistance 1000) "- , ." }} km in {{ math.Floor (div $element.runAverageMovingTime 60) }}:{{ mod $element.runAverageMovingTime 60 }} min.</td>
-								<td>{{ math.Floor (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) }}:{{ printf "%02d" (mod (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) 60) }} min / km</td>
-								<td>{{ math.Round (div $element.runTotalDistance 1000) }} kilometer</td>
-							</tr>
+								{{ if ne $element.runTotalDistance 0 }}
+								<tr>
+									<td>{{ add $index 1 }}.</td>
+									<td>{{ $element.firstName }}</td>
+									<td>{{ $element.runTotalActivities }}</td>
+									<td>{{ lang.NumFmt 2 (div $element.runAverageDistance 1000) "- , ." }} km in {{ math.Floor (div $element.runAverageMovingTime 60) }}:{{ mod $element.runAverageMovingTime 60 }} min.</td>
+									<td>{{ math.Floor (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) }}:{{ printf "%02d" (mod (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) 60) }} min / km</td>
+									<td>{{ math.Round (div $element.runTotalDistance 1000) }} kilometer</td>
+								</tr>
+								{{ else }}
+								<tr>
+									<td>{{ add $index 1 }}.</td>
+									<td>{{ $element.firstName }}</td>
+									<td colspan="4" style="font-style: italic;">Nog geen data beschikbaar.</td>
+								</tr>
+								{{ end }}
+							
 							{{ end }}
 						</tbody>
 					</table>
