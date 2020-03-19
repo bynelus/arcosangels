@@ -7,4 +7,4 @@ googleAnalytics = "UA-160866422-1"
 [caches]
 [caches.getjson]
 dir = ":cacheDir/:project"
-maxAge = "1h"
+maxAge = 0
