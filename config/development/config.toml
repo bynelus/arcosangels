@@ -2,7 +2,7 @@ baseURL = "http://localhost:1313/"
 googleAnalytics = ""
 
 [params]
-  rankingsURL = "http://localhost:8080/json"
+  rankingsURL = "https://arcos-angels-strava-client.herokuapp.com/json"
 
 [caches]
 [caches.getjson]
