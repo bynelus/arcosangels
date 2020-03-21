@@ -45,4 +45,10 @@
 			},
 		}
 	});
+
+	$(window).on('resize',function(){
+		var size = $(window).width();
+		$('.photo-thumb').toggleClass('project-thumb', size > 767);
+	}).resize();
+
 </script>
