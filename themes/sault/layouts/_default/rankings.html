@@ -24,19 +24,19 @@
 							{{ $json := getJSON .Site.Params.RankingsURL }}
 							{{ range $index, $element := $json }}
 							
-								{{ if $element.runTotalDistance }}
+								{{ if $element.hasData }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
-									<td>{{ $element.firstName }}</td>
-									<td>{{ $element.runTotalActivities }}</td>
-									<td>{{ lang.NumFmt 2 (div $element.runAverageDistance 1000) "- , ." }} kilometer</td>
-									<td>{{ math.Floor (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) }}:{{ printf "%02d" (mod (div (div $element.runAverageMovingTime 60) (div $element.runAverageDistance 1000)) 60) }} min / km</td>
-									<td>{{ math.Round (div $element.runTotalDistance 1000) }} kilometer</td>
+									<td>{{ $element.name }}</td>
+									<td>{{ $element.totalRuns }}</td>
+									<td>{{ $element.averageRunDistance }} kilometer</td>
+									<td>{{ $element.averageRunMinutePerKM }} min / km</td>
+									<td>{{ $element.totalRunDistance }} kilometer</td>
 								</tr>
 								{{ else }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
-									<td>{{ $element.firstName }}</td>
+									<td>{{ $element.name }}</td>
 									<td colspan="4" style="font-style: italic;">Nog geen data beschikbaar.</td>
 								</tr>
 								{{ end }}
