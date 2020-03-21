@@ -71,7 +71,7 @@
 								{{ else }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
-									<td>Fan {{ $element.name }}</td>
+									<td>fan{{ upper $element.name }}</td>
 									<td colspan="4" style="font-style: italic;">Nog geen data beschikbaar.</td>
 								</tr>
 								{{ end }}
