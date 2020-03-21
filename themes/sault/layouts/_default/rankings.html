@@ -21,7 +21,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{{ $json := getJSON .Site.Params.RankingsURL }}
+							{{ $json := getJSON .Site.Params.RankingMembersURL }}
 							{{ range $index, $element := $json }}
 							
 								{{ if $element.hasData }}
@@ -37,6 +37,41 @@
 								<tr>
 									<td>{{ add $index 1 }}.</td>
 									<td>{{ $element.name }}</td>
+									<td colspan="4" style="font-style: italic;">Nog geen data beschikbaar.</td>
+								</tr>
+								{{ end }}
+							{{ end }}
+						</tbody>
+					</table>
+					<h4 class="text-center">Onze super fans ❤️</h4>
+					<table class="extra-margin-bottom">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Wie?</th>
+								<th>Aantal loopjes</th>
+								<th>Gemiddelde ronde</th>
+								<th>Gemiddelde snelheid</th>
+								<th>Totaal</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{ $json := getJSON .Site.Params.RankingFansURL }}
+							{{ range $index, $element := $json }}
+							
+								{{ if $element.hasData }}
+								<tr>
+									<td>{{ add $index 1 }}.</td>
+									<td>Fan {{ $element.name }}</td>
+									<td>{{ $element.totalRuns }}</td>
+									<td>{{ $element.averageRunDistance }} kilometer</td>
+									<td>{{ $element.averageRunMinutePerKM }} min / km</td>
+									<td>{{ $element.totalRunDistance }} kilometer</td>
+								</tr>
+								{{ else }}
+								<tr>
+									<td>{{ add $index 1 }}.</td>
+									<td>Fan {{ $element.name }}</td>
 									<td colspan="4" style="font-style: italic;">Nog geen data beschikbaar.</td>
 								</tr>
 								{{ end }}

@@ -2,7 +2,8 @@ baseURL = "http://localhost:1313/"
 googleAnalytics = ""
 
 [params]
-  rankingsURL = "http://localhost:8080/json"
+  rankingMembersURL = "http://localhost:8080/api/members"
+  rankingFansURL = "http://localhost:8080/api/fans"
 
 [caches]
 [caches.getjson]
