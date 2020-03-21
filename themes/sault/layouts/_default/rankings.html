@@ -62,7 +62,7 @@
 								{{ if $element.hasData }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
-									<td>Fan {{ $element.name }}</td>
+									<td>fan{{ upper $element.name }}</td>
 									<td>{{ $element.totalRuns }}</td>
 									<td>{{ $element.averageRunDistance }} kilometer</td>
 									<td>{{ $element.averageRunMinutePerKM }} min / km</td>
