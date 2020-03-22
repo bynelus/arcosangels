@@ -11,7 +11,7 @@
 		</article>
 	</div>
 	<div class="col-12">
-		<div class="grid clearfix">
+		<div class="grid clearfix" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer", "percentPosition": true, "transitionDuration": "0.3s" }'>
 			{{ range where .Site.RegularPages.ByDate.Reverse "Section" "post" }}
 			<article class="grid-item post has-thumbnail">
 				<a href="{{ .Permalink }}" class="feature-image-link"><img src="{{ .Params.Image | relURL }}" width="730" height="500" alt=""></a>
@@ -22,6 +22,8 @@
 				</div>
 			</article>    
 			{{ end }}
+			<div class="grid-sizer"></div>
+			<div class="gutter-sizer"></div>
 		</div>
 	</div>
 </div>
