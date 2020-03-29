@@ -2,10 +2,12 @@ baseURL = "https://arcos-angels.nl/"
 googleAnalytics = "UA-160866422-1"
 
 [params]
-  rankingMembersURL = "https://arcos-angels-strava-client.herokuapp.com/api/members"
-  rankingFansURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans"
+  rankingMembersRunURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/run"
+  rankingMembersRideURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/ride"
+  rankingFansRunURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/run"
+  rankingFansRideURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/ride"
 
 [caches]
-[caches.getjson]
-dir = ":cacheDir/:project"
-maxAge = 0
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = 0

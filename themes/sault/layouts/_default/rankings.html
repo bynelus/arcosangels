@@ -30,7 +30,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								{{ $json := getJSON .Site.Params.RankingMembersURL }}
+								{{ $json := getJSON .Site.Params.RankingMembersRunURL }}
 								{{ range $index, $element := $json }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
@@ -56,7 +56,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								{{ $json := getJSON .Site.Params.RankingFansURL }}
+								{{ $json := getJSON .Site.Params.RankingFansRunURL }}
 								{{ range $index, $element := $json }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
@@ -86,7 +86,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								{{ $json := getJSON .Site.Params.RankingMembersURL }}
+								{{ $json := getJSON .Site.Params.RankingMembersRideURL }}
 								{{ range $index, $element := $json }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
@@ -112,7 +112,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								{{ $json := getJSON .Site.Params.RankingFansURL }}
+								{{ $json := getJSON .Site.Params.RankingFansRideURL }}
 								{{ range $index, $element := $json }}
 								<tr>
 									<td>{{ add $index 1 }}.</td>
