@@ -4,8 +4,10 @@ googleAnalytics = "UA-160866422-1"
 [params]
   rankingMembersRunURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/run"
   rankingMembersRideURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/ride"
+  rankingMembersSwimURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/swim"
   rankingFansRunURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/run"
   rankingFansRideURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/ride"
+  rankingFansSwimURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/swim"
 
 [caches]
   [caches.getjson]

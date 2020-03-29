@@ -4,8 +4,10 @@ googleAnalytics = ""
 [params]
   rankingMembersRunURL = "http://localhost:8080/api/members/run"
   rankingMembersRideURL = "http://localhost:8080/api/members/ride"
+  rankingMembersSwimURL = "http://localhost:8080/api/members/swim"
   rankingFansRunURL = "http://localhost:8080/api/fans/run"
   rankingFansRideURL = "http://localhost:8080/api/fans/ride"
+  rankingFansSwimURL = "http://localhost:8080/api/fans/swim"
 
 [caches]
 [caches.getjson]

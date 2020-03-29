@@ -8,13 +8,14 @@
 
 
 		<div class="row">
-			<div class="col-lg-2">
+			<div class="col-lg-3">
 				<ul class="tab-links" role="tablist">
-					<li><a href="#running" class="active" data-toggle="tab" role="tab" aria-controls="running" aria-selected="true">Hardlopen</a></li>
-					<li><a href="#riding" data-toggle="tab" role="tab" aria-controls="riding" aria-selected="false">Fietsen</a></li>
+					<li><a href="#running" class="active" data-toggle="tab" role="tab" aria-controls="running" aria-selected="true">🏃🏻‍♂️ Hardlopen</a></li>
+					<li><a href="#riding" data-toggle="tab" role="tab" aria-controls="riding" aria-selected="false">🚴🏻‍♂️ Fietsen</a></li>
+					<li><a href="#swimming" data-toggle="tab" role="tab" aria-controls="riding" aria-selected="false">🏊🏻‍♂️ Zwemmen</a></li>
 				</ul>
 			</div>
-			<div class="col-lg-10">
+			<div class="col-lg-9">
 				<div id="running" class="tab-content active" role="tabpanel">
 					<div class="white-box eq-height overflow-div">
 						<h4 class="text-center extra-margin-bottom">🏃🏻‍♂️ Seizoen '20</h4>
@@ -121,6 +122,62 @@
 									<td>{{ $element.averageRideDistance }} kilometer</td>
 									<td>{{ $element.averageRideSpeed }} km / uur</td>
 									<td>{{ $element.totalRideDistance }} kilometer</td>
+								</tr>
+								{{ end }}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="swimming" class="tab-content" role="tabpanel">
+					<div class="white-box eq-height overflow-div">
+						<h4 class="text-center extra-margin-bottom">🏊🏻‍♂️ Seizoen '20</h4>
+						<table class="extra-margin-bottom">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Wie?</th>
+									<th>Aantal</th>
+									<th>Gemiddelde ronde</th>
+									<th>Gemiddelde snelheid</th>
+									<th>Totaal</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{ $json := getJSON .Site.Params.RankingMembersSwimURL }}
+								{{ range $index, $element := $json }}
+								<tr>
+									<td>{{ add $index 1 }}.</td>
+									<td>{{ $element.name }}</td>
+									<td>{{ $element.totalSwims }}</td>
+									<td>{{ $element.averageSwimDistance }} kilometer</td>
+									<td>{{ $element.averageSwimSpeed }} km / uur</td>
+									<td>{{ $element.totalSwimDistance }} kilometer</td>
+								</tr>
+								{{ end }}
+							</tbody>
+						</table>
+						<h4 class="text-center">Onze super fans ❤️</h4>
+						<table class="extra-margin-bottom">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Wie?</th>
+									<th>Aantal</th>
+									<th>Gemiddelde ronde</th>
+									<th>Gemiddelde snelheid</th>
+									<th>Totaal</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{ $json := getJSON .Site.Params.RankingFansSwimURL }}
+								{{ range $index, $element := $json }}
+								<tr>
+									<td>{{ add $index 1 }}.</td>
+									<td>{{ $element.name }}</td>
+									<td>{{ $element.totalSwims }}</td>
+									<td>{{ $element.averageSwimDistance }} kilometer</td>
+									<td>{{ $element.averageSwimSpeed }} km / uur</td>
+									<td>{{ $element.totalSwimDistance }} kilometer</td>
 								</tr>
 								{{ end }}
 							</tbody>
