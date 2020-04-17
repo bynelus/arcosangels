@@ -1,2 +1,5 @@
 /* place your custom code here */
 
+.overflow-div {
+	overflow-x: auto;
+}

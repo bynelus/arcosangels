@@ -2,12 +2,12 @@ baseURL = "http://localhost:1313/"
 googleAnalytics = ""
 
 [params]
-  rankingMembersRunURL = "http://localhost:8080/api/members/run"
-  rankingMembersRideURL = "http://localhost:8080/api/members/ride"
-  rankingMembersSwimURL = "http://localhost:8080/api/members/swim"
-  rankingFansRunURL = "http://localhost:8080/api/fans/run"
-  rankingFansRideURL = "http://localhost:8080/api/fans/ride"
-  rankingFansSwimURL = "http://localhost:8080/api/fans/swim"
+  rankingMembersRunURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/run"
+  rankingMembersRideURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/ride"
+  rankingMembersSwimURL = "https://arcos-angels-strava-client.herokuapp.com/api/members/swim"
+  rankingFansRunURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/run"
+  rankingFansRideURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/ride"
+  rankingFansSwimURL = "https://arcos-angels-strava-client.herokuapp.com/api/fans/swim"
 
 [caches]
 [caches.getjson]
